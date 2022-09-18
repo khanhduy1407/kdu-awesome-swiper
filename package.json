@@ -1,0 +1,57 @@
+{
+  "name": "kdu-awesome-swiper",
+  "description": "Swiper component for Kdu",
+  "version": "4.1.1",
+  "keywords": [
+    "kdu swiper",
+    "kdu awesome swiper",
+    "kdu carrousel",
+    "carrousel",
+    "swiper"
+  ],
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khanhduy1407/kdu-awesome-swiper"
+  },
+  "bugs": "https://github.com/khanhduy1407/kdu-awesome-swiper/issues",
+  "author": "NKDuy",
+  "main": "dist/kdu-awesome-swiper.js",
+  "module": "dist/kdu-awesome-swiper.esm.js",
+  "browser": "dist/kdu-awesome-swiper.js",
+  "jsdelivr": "dist/kdu-awesome-swiper.js",
+  "unpkg": "dist/kdu-awesome-swiper.js",
+  "jspm": {
+    "main": "dist/kdu-awesome-swiper.esm.js",
+    "registry": "npm",
+    "format": "esm"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "cleanup": "rmdir /s dist",
+    "build": "npm run cleanup && cross-env NODE_ENV=production nkd build",
+    "lint": "nkd lint --ext .ts,.kdu src",
+    "rebirth": "npm run lint && npm run build",
+    "release": ". ./scripts/release.sh"
+  },
+  "peerDependencies": {
+    "swiper": "^5.2.0",
+    "kdu": "2.x"
+  },
+  "devDependencies": {
+    "@types/swiper": "^5.2.1",
+    "cross-env": "^6.0.3",
+    "kdu": "^2.6.14-alpha.1",
+    "nkd-factory": "^0.3.3",
+    "swiper": "^5.2.0",
+    "typescript": "^3.7.5"
+  },
+  "engines": {
+    "node": ">=8"
+  }
+}
