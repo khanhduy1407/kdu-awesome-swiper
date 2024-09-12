@@ -2,7 +2,7 @@
 
 set -e
 
-PKG_VERSION=$(jq -r '.version' package.json)
+PKG_VERSION=$(./jq.exe -r '.version' package.json)
 
 git fetch origin v"$PKG_VERSION" || {
   npx standard-version --skip.changelog --skip.commit -a --release-as "$PKG_VERSION"
