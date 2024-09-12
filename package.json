@@ -32,7 +32,7 @@
     "index.js"
   ],
   "scripts": {
-    "release": ". ./scripts/release.sh"
+    "release": "sh ./scripts/release.sh"
   },
   "peerDependencies": {
     "@nkduy/swiper": "^8.0.0",
